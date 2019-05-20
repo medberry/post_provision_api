@@ -1,0 +1,14 @@
+---
+- name: This is just a simple playbook to be called in a provisioning callback.
+  hosts: all
+  # in reality this should probably be less than all
+  # but remember that it SHOULD be a single node that is calling this.
+  become: true
+  vars: 
+    motd: "This MOTD was created in a provisioning callback template."
+
+  tasks:
+  - name: Set the Message of the Day
+    copy:
+      content: "{{ motd }}"
+      dest: /etc/motd
