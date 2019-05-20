@@ -5,7 +5,7 @@
   # but remember that it SHOULD be a single node that is calling this.
   become: true
   vars: 
-    motd: "This MOTD was created in a provisioning callback template."
+    motd: "This MOTD was created in a provisioning callback template.\nSet in {{ playbook_dir }} playbook."
 
   tasks:
   - name: Set the Message of the Day
