@@ -17,3 +17,5 @@ curl --data "host_config_key=POST_PROVISION" https://tower.example.org:443/api/v
 The Job Template created must have no "PROMPT ON LAUNCH" items checked (it must be able to execute without user actions.)
 
 The host calling it must match one (and one only) inventory item.
+
+And of course, the host calling it must be in the inventory. (This may sound like a catch 22 but the tool/playbook that created the machine could also add it to the inventory.)
