@@ -12,3 +12,8 @@ The Provisioning Callback URL also provides an example. Click on the Question Ma
 ```bash
 curl --data "host_config_key=POST_PROVISION" https://tower.example.org:443/api/v2/job_templates/123456/callback/
 ```
+## Requirements
+
+The Job Template created must have no "PROMPT ON LAUNCH" items checked (it must be able to execute without user actions.)
+
+The host calling it must match one (and one only) inventory item.
